@@ -11,21 +11,25 @@ export interface Config {
 }
 
 export interface BinConfig extends Config {
-  outPath: string
+  tsPath: string
 }
 
-export function getTs(config: Config) {
+export function getTs(config: Config): string {
   const solcOutput = getSolcOutput(config)
   const tsParts = config.outs.map((out) => {
     const contractOutput = solcOutput.contracts[out.fileName][out.contractName]
-    const outValue = {
-      abi: contractOutput.abi,
-      bytecodeHex: contractOutput.evm.bytecode.object
-    }
-    return `export const ${out.constName}: ContractOutput = ${JSON.stringify(outValue, null, 2)}`
+    return [
+      `export const ${out.constName}: ContractOutput = {`,
+      `  abi: ${JSON.stringify(contractOutput.abi)},`,
+      `  bytecode: Uu.fromHexish('${contractOutput.evm.bytecode.object}')`,
+      `}`
+    ].join('\n')
   })
   return [
-    'export interface ContractOutput { abi: Object, bytecodeHex: string }',
+    [
+      "import { Uu } from pollenium-uvaursi",
+      "import { ContractOutput } from pollenium-clover"
+    ].join('\n'),
     ...tsParts
   ].join('\n\n')
 }

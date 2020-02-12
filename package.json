@@ -5,7 +5,7 @@
   "main": "node/index.js",
   "scripts": {
     "tsc": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./node/bin/succory.js test/succory.config.js"
   },
   "bin": {
     "succory": "./node/bin/succory.js"

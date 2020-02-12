@@ -14,14 +14,14 @@ var solc_1 = __importDefault(require("solc"));
 var fs_1 = __importDefault(require("fs"));
 function getTs(config) {
     var solcOutput = getSolcOutput(config);
+    console.log(solcOutput);
     var tsParts = config.outs.map(function (out) {
         var contractOutput = solcOutput.contracts[out.fileName][out.contractName];
         return [
             "export const " + out.constName + ": ContractOutput = {",
-            "  abi: " + JSON.stringify(contractOutput.abi) + ",",
-            "  bytecode: Uu.fromHexish('" + contractOutput.evm.bytecode.object + "')",
-            "}"
-        ].join('\n');
+            "  abi: " + JSON.stringify(contractOutput.abi, null, 2) + ",",
+            "  bytecode: Uu.fromHexish('" + contractOutput.evm.bytecode.object + "')"
+        ].join('\n\n');
     });
     return __spreadArrays([
         [
