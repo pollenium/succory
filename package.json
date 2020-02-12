@@ -1,0 +1,31 @@
+{
+  "name": "pollenium-succory",
+  "version": "0.0.0",
+  "description": "",
+  "main": "node/index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "succory": "./node/bin/succory.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pollenium/succory.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pollenium/succory/issues"
+  },
+  "homepage": "https://github.com/pollenium/succory#readme",
+  "devDependencies": {
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "@types/node": "^13.7.1",
+    "solc": "^0.5.16"
+  }
+}

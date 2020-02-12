@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "rootDir": "ts",
+    "outDir": "node",
+    "lib": ["es5", "es6"],
+    "esModuleInterop": true,
+    "types": ["node"],
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "declaration": true,
+    "moduleResolution": "node"
+  }
+}
