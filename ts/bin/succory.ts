@@ -6,7 +6,6 @@ import fs from 'fs'
 
 const cwd = process.cwd()
 const configJsPath = path.resolve(cwd, process.argv[2] || 'succory.config.js')
-const outTsPath = path.resolve(cwd, process.argv[3])
 const config: BinConfig = require(configJsPath)
 
 const ts = getTs(config)

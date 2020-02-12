@@ -9,7 +9,6 @@ var path_1 = __importDefault(require("path"));
 var fs_1 = __importDefault(require("fs"));
 var cwd = process.cwd();
 var configJsPath = path_1["default"].resolve(cwd, process.argv[2] || 'succory.config.js');
-var outTsPath = path_1["default"].resolve(cwd, process.argv[3]);
 var config = require(configJsPath);
 var ts = __1.getTs(config);
 var tsPath = path_1["default"].resolve(cwd, config.outPath);
