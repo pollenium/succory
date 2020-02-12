@@ -10,6 +10,10 @@ export interface Config {
   outs: Array<Out>
 }
 
+export interface BinConfig extends Config {
+  outPath: string
+}
+
 export function getTs(config: Config) {
   const solcOutput = getSolcOutput(config)
   const tsParts = config.outs.map((out) => {
