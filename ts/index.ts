@@ -27,8 +27,8 @@ export function getTs(config: Config): string {
   })
   return [
     [
-      "import { Uu } from pollenium-uvaursi",
-      "import { ContractOutput } from pollenium-clover"
+      "import { Uu } from 'pollenium-uvaursi'",
+      "import { ContractOutput } from 'pollenium-clover'"
     ].join('\n'),
     ...tsParts
   ].join('\n\n')

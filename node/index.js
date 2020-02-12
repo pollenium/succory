@@ -25,8 +25,8 @@ function getTs(config) {
     });
     return __spreadArrays([
         [
-            "import { Uu } from pollenium-uvaursi",
-            "import { ContractOutput } from pollenium-clover"
+            "import { Uu } from 'pollenium-uvaursi'",
+            "import { ContractOutput } from 'pollenium-clover'"
         ].join('\n')
     ], tsParts).join('\n\n');
 }

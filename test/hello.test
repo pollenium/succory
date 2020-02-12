@@ -1,5 +1,5 @@
-import { Uu } from pollenium-uvaursi
-import { ContractOutput } from pollenium-clover
+import { Uu } from 'pollenium-uvaursi'
+import { ContractOutput } from 'pollenium-clover'
 
 export const helloA: ContractOutput = {
   abi: [{"constant":true,"inputs":[],"name":"doThing","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"pure","type":"function"}],
