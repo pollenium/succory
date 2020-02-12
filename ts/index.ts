@@ -20,7 +20,7 @@ export function getTs(config: Config): string {
     const contractOutput = solcOutput.contracts[out.fileName][out.contractName]
     return [
       `export const ${out.constName}: ContractOutput = {`,
-      `  abi: ${JSON.stringify(contractOutput.abi)},`,
+      `  abiJson: '${JSON.stringify(contractOutput.abi)}',`,
       `  bytecode: Uu.fromHexish('${contractOutput.evm.bytecode.object}')`,
       `}`
     ].join('\n')

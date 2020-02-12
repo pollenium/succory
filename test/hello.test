@@ -2,11 +2,11 @@ import { Uu } from 'pollenium-uvaursi'
 import { ContractOutput } from 'pollenium-clover'
 
 export const helloA: ContractOutput = {
-  abi: [{"constant":true,"inputs":[],"name":"doThing","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"pure","type":"function"}],
+  abiJson: '[{"constant":true,"inputs":[],"name":"doThing","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"pure","type":"function"}]',
   bytecode: Uu.fromHexish('6080604052348015600f57600080fd5b50607f8061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063fa62770c14602d575b600080fd5b60336045565b60408051918252519081900360200190f35b60019056fea265627a7a72315820573516906618f752c2a22bca4d676097303d4c7150d6d0cd556bb4a25959f29e64736f6c63430005100032')
 }
 
 export const helloB: ContractOutput = {
-  abi: [],
+  abiJson: '[]',
   bytecode: Uu.fromHexish('6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820e159ae60428d68de9bbe0af2e65c345416f31c9390da0265da7ac5163aa9b26e64736f6c63430005100032')
 }
