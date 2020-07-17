@@ -25,7 +25,9 @@
     "typescript": "^3.7.5"
   },
   "dependencies": {
-    "@types/node": "^13.7.1",
-    "solc": "^0.5.16"
+    "@types/node": "^13.7.1"
+  },
+  "peerDependencies": {
+    "solc": "*"
   }
 }
